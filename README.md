@@ -4,7 +4,7 @@
 ## Lab 1
 
 ### App Description
-`TODO://` Add app description
+The first version of the Flashcards App.
 
 
 ### App Walk-though
