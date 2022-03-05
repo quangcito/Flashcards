@@ -10,7 +10,6 @@ The first version of the Flashcards App.
 ### App Walk-though
 <img src='https://imgur.com/a/VCz5kEt' title='Video Walkthrough' width= 200 alt='Video Walkthrough' />
 
-<img src="YOUR_GIF_URL_HERE" width=200><br>
 
 
 
