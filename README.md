@@ -8,7 +8,8 @@ The first version of the Flashcards App.
 
 
 ### App Walk-though
-<img src='https://imgur.com/a/VCz5kEt' title='Video Walkthrough' width= 200 alt='Video Walkthrough' />
+<img src='https://i.imgur.com/jHrA1bC.gif' title='Video Walkthrough' width= 200 alt='Video Walkthrough' />
+
 
 
 
