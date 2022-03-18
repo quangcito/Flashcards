@@ -110,7 +110,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="NYC-xP-QbD">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="Ada-BI-oUd"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="Ada-BI-oUd">
+                            <connections>
+                                <action selector="didTapOnCancel:" destination="72d-kW-O7L" id="G8g-u4-JL4"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xCt-mg-dN4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

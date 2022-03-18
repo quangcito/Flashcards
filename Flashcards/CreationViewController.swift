@@ -15,7 +15,10 @@ class CreationViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func didTapOnCancel(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
