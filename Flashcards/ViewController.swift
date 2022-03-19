@@ -7,11 +7,19 @@
 
 import UIKit
 
+struct Flashcard {
+    var question: String
+    var answer: String
+}
+
 class ViewController: UIViewController {
 
 
     @IBOutlet weak var frontLabel: UILabel!
     @IBOutlet weak var backLabel: UILabel!
+    
+    // Array to hold our flashcards,
+    var flashcards = [Flashcard]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,9 +36,13 @@ class ViewController: UIViewController {
     }
     
     func updateFlashcard(question: String, answer: String) {
-        frontLabel.text = question
-        backLabel.text = answer
+        let flashcard = Flashcard(question: <#T##String#>, answer: <#T##String#>)
+        frontLabel.text = flashcard.question
+        backLabel.text = flashcard.answer
         frontLabel.isHidden = false
+        
+        // Adding flashcard in the flashcards array
+        flashcards.append(flashcard)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
