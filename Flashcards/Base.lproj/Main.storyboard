@@ -115,7 +115,16 @@
                                 <action selector="didTapOnCancel:" destination="72d-kW-O7L" id="G8g-u4-JL4"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="4Fm-Pk-Xwj">
+                            <connections>
+                                <action selector="didTapOnDone:" destination="72d-kW-O7L" id="hzV-ZQ-kcA"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="answerTextField" destination="G0e-G8-YtS" id="cpM-bd-gB9"/>
+                        <outlet property="questionTextField" destination="8Zx-gU-JiI" id="yJ4-Jm-2cc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xCt-mg-dN4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
