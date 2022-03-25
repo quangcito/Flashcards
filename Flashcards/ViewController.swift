@@ -43,16 +43,30 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didTapOnPrev(_ sender: Any) {
+        // Decrease current index
+        currentIndex = currentIndex - 1
+        
+        // Update labels
+        updateLabels()
+        
+        // Update buttons
+        updateNextPrevButtons()
     }
     
     @IBAction func didTapOnNext(_ sender: Any) {
+        // Increase current index
+        currentIndex = currentIndex + 1
+        
+        // Update labels
+        updateLabels()
+        
+        // Update buttons
+        updateNextPrevButtons()
     }
     
     
     func updateFlashcard(question: String, answer: String) {
         let flashcard = Flashcard(question: <#T##String#>, answer: <#T##String#>)
-        frontLabel.text = flashcard.question
-        backLabel.text = flashcard.answer
         frontLabel.isHidden = false
         
         // Adding flashcard in the flashcards array
@@ -68,6 +82,9 @@ class ViewController: UIViewController {
         
         // Update buttons
         updateNextPrevButtons()
+        
+        // Update labels
+        updateLabels()
     }
     
     func updateNextPrevButtons() {
@@ -85,6 +102,15 @@ class ViewController: UIViewController {
         } else {
             prevButton.isEnabled = true
         }
+    }
+    
+    func updateLabels() {
+        // Get current flashcard
+        let currentFlashcard = flashcards[currentIndex]
+        
+        // Update labels
+        frontLabel.text = currentFlashcard.question
+        backLabel.text = currentFlashcard.answer
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
