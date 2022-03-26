@@ -8,7 +8,7 @@ The third version of the Flashcards App.
 
 ### App Walk-though
 
-<img src='https://i.imgur.com/FBCPbsH.gif' title='Video Walkthrough' width= 200 alt='Video Walkthrough'/>
+<img src='https://i.imgur.com/Fj18tt8.gif' title='Video Walkthrough' width= 200 alt='Video Walkthrough'/>
 
 
 
