@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import XCTest
 
 struct Flashcard {
     var question: String
@@ -30,7 +31,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        updateFlashcard(question: "What is the capital of Brazil?", answer: "Brasilia")
+        // Read saved flashcards
+        readSavedFlashcards()
+        
+        // Adding our initial flashcard if needed
+        if flashcards.count == 0 {
+            updateFlashcard(question: "What is the capital of Brazil?", answer: "Brasilia")
+        } else {
+            updateLabels()
+            updateNextPrevButtons()
+        }
     }
 
     
@@ -85,6 +95,9 @@ class ViewController: UIViewController {
         
         // Update labels
         updateLabels()
+        
+        // Save all flashcards to disk
+        saveAllFlashcardsToDisk()
     }
     
     func updateNextPrevButtons() {
@@ -123,6 +136,34 @@ class ViewController: UIViewController {
         
     // We set the flashcardsController property to self
     creationController.flashcardsController = self
+    }
+    
+    func saveAllFlashcardsToDisk() {
+        
+        // From flashcard array to dictionary array
+        let dictionaryArray = flashcards.map { (card) -> [String: String] in
+            return ["question": card.question, "answer": card.answer]
+        }
+        
+        // Save array on disk using UserDefaults
+        UserDefaults.standard.set(dictionaryArray, forKey: "flashcards")
+        
+        // Log it
+        print("Flashcards saved to UserDefaults")
+    }
+    
+    func readSavedFlashcards() {
+        // Read dictionary array from disk (if any)
+        if let dictionaryArray = UserDefaults.standard.array(forKey: "flashcards") as? [[String: String]] {
+            
+            // In here we know for sure we have a dictionary array
+            let savedCards = dictionaryArray.map { dictionary -> Flashcard in
+                return Flashcard(question: dictionary["question"]!, answer: dictionary["answer"]!)
+            }
+            
+            // Put all these cards in our flashcards array
+            flashcards.append(contentsOf: savedCards)
+        }
     }
 }
 
