@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import XCTest
 
 struct Flashcard {
     var question: String
@@ -76,7 +75,7 @@ class ViewController: UIViewController {
     
     
     func updateFlashcard(question: String, answer: String) {
-        let flashcard = Flashcard(question: <#T##String#>, answer: <#T##String#>)
+        let flashcard = Flashcard(question: question, answer: answer)
         frontLabel.isHidden = false
         
         // Adding flashcard in the flashcards array
