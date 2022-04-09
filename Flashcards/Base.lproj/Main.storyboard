@@ -81,6 +81,7 @@
                     </view>
                     <connections>
                         <outlet property="backLabel" destination="Fmg-JZ-5Vb" id="xtg-Ae-5wh"/>
+                        <outlet property="card" destination="L2y-yt-W9V" id="xB0-uc-Cge"/>
                         <outlet property="frontLabel" destination="s2I-Xl-kse" id="Ulf-yc-FH6"/>
                         <outlet property="nextButton" destination="UOp-S6-dDt" id="iyh-qG-RHd"/>
                         <outlet property="prevButton" destination="775-QR-kB2" id="mKv-T8-a4k"/>
