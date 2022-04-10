@@ -8,8 +8,7 @@ The forth version of the Flashcards App.
 
 ### App Walk-though
 
-<img src='https://i.imgur.com/Liy1MSt.gif' title='Video Walkthrough' width= 200 alt='Video Walkthrough'/>
-
+<img src='https://i.imgur.com/e9oXVME.gif' title='Video Walkthrough' width= 200 alt='Video Walkthrough'/>
 
 ## Required
 - [x] User should see the app icon 
